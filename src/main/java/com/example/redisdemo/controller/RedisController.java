@@ -11,6 +11,7 @@ public class RedisController {
     private static final int port = 6379;
     private static final String auth = "redis123456";
 
+
     @GetMapping("/{key}")
     public Object getEntry(@PathVariable("key") String key) {
         try (Jedis jedis = new Jedis(host, port)) {
